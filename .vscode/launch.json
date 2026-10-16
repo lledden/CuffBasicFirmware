@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Cuff - PICkit 4",
+            "type": "mplab-core-da",
+            "request": "launch",
+            "project": "Qi5xCuffBasic",
+            "configuration": "default",
+            "device": "PIC16F17124",
+            "tool": "PICkit 4",
+            "interface": "ICSP",
+            "stopOnEntry": true
+        }
+    ]
+}

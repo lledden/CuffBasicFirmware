@@ -1,0 +1,67 @@
+{
+    "version": "1.9",
+    "configurations": [
+        {
+            "name": "default",
+            "id": "",
+            "device": "PIC16F17124",
+            "imagePath": "./out/Qi5xCuffBasic/default.elf",
+            "toolProperties": "default-tool-base",
+            "tool": "PICkit 4",
+            "packs": [
+                {
+                    "name": "PIC16F1xxxx_DFP",
+                    "vendor": "Microchip",
+                    "version": "1.32.471"
+                }
+            ],
+            "fileSet": "default",
+            "toolchain": "default-XC8",
+            "userVariables": "default-uservariables"
+        }
+    ],
+    "propertyGroups": [
+        {
+            "name": "default-uservariables",
+            "type": "uservariables",
+            "properties": {}
+        },
+        {
+            "name": "default-XC8",
+            "type": "toolchain",
+            "provider": "microchip.toolchains:xc8@3.10",
+            "properties": {}
+        },
+        {
+            "name": "default-tool-base",
+            "type": "tool",
+            "properties": {
+                "programoptions.pgmentry.voltage": "low",
+                "programoptions.pgmspeed": "Min",
+                "poweroptions.powerenable": true,
+                "voltagevalue": "3.3",
+                "programoptions.pgcconfig": "none",
+                "programoptions.pgdconfig": "none"
+            }
+        }
+    ],
+    "fileSets": [
+        {
+            "name": "default",
+            "files": [
+                {
+                    "include": "**/*",
+                    "exclude": "**/@(build|_build|out|cmake|.vscode)/**/*"
+                },
+                "config.mcc/mcc_generated_files/system/src/clock.c",
+                "config.mcc/mcc_generated_files/system/src/interrupt.c",
+                "config.mcc/mcc_generated_files/system/src/system.c",
+                "config.mcc/mcc_generated_files/system/src/config_bits.c",
+                "config.mcc/main.c",
+                "config.mcc/mcc_generated_files/system/src/pins.c",
+                "config.mcc/mcc_generated_files/adc/src/adc.c",
+                "config.mcc/mcc_generated_files/uart/src/eusart1.c"
+            ]
+        }
+    ]
+}
